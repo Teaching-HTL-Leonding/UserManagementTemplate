@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace UserManagement.Data
 {
@@ -9,6 +10,7 @@ namespace UserManagement.Data
     {
         public int Id { get; set; }
 
+        [MaxLength(100)]
         public string Name { get; set; } = string.Empty;
 
         /// <summary>
