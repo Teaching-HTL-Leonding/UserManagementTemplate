@@ -55,6 +55,7 @@ You can design the URLs for the requested APIs as you like. However, the [starte
   * Extend [`DemoDataGenerator`](Start/Data/DemoDataGenerator.cs) so that it maintains some meaningful demo groups in the DB.
 
 * Design and build a web API controller for user management that supports the following operations:
+  * All user management web APIs can only be called by authenticated users. Anonymous access **must** be prevented.
   * Get details about the currently signed-in user (see comments about simulated authentication above).
     * The API has to return a JSON object containing the user's ID, name identifier, email, first name, and last name.
   * Get a list of all users.
@@ -62,6 +63,7 @@ You can design the URLs for the requested APIs as you like. However, the [starte
     * The API has to return an empty array if there are no users in the DB.
 
 * Design and build a web API controller for group management that supports the following operations:
+  * All group management web APIs can only be called by authenticated users who have the ***administrator* role**. Anonymous access **must** be prevented.
   * Get details about a single group.
     * The caller has to specify the ID of the group to return.
     * The API has to return *not found* if there is no group with the given ID.
